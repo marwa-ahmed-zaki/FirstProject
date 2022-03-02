@@ -1,5 +1,35 @@
-  <app-header></app-header>
+
+<app-header></app-header>
   <app-nav></app-nav>
+  <app-data-component></app-data-component>
+  <button (click)="DisplayProducts()">Show Products Table</button>
+   flag is : {{flag}}
+
+<div *ngIf="flag then ShowTable;"></div>
+
+<ng-template #ShowTable>
+    <table >
+        <thead>
+            <tr>
+                <th >ID</th>
+                <th >Name</th>
+                <th >Price</th>
+                <th >avilablty</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Product of Products ;">
+    
+                <td>{{Product.id}}</td>
+                <td>{{Product.name}}</td>
+                <td>{{Product.price}}</td>
+                <td>{{Product.avilablty}}</td>
+            </tr>
+    
+        </tbody>
+    </table>
+
+</ng-template>
   <app-products></app-products>
 <app-footer></app-footer>
 <router-outlet></router-outlet>

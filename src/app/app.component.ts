@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductsComponent } from './products/products.component';
 
 @Component({
   //selector: 'app-root',
@@ -14,4 +15,24 @@ service, directive or filter to be modified prior to its usage.*/
 })
 export class AppComponent {
   title = 'FirstProject';
+
+flag:boolean=false;
+Products:any;
+
+
+constructor(){}
+@ViewChild(ProductsComponent) ViewProductList!:ProductsComponent;
+
+ngAfterViewInit(): void {
+  this.Products=this.ViewProductList.renderValues();
+  
+}
+
+DisplayProducts()
+{
+
+  if(this.flag==false){
+    this.flag=true;
+  }
+}
 }

@@ -1,4 +1,7 @@
 <!-- <p>products works!</p> -->
+
+
+
 <h1>{{ storeName | uppercase }}</h1>
 <img [src] = storeLogo >
 <div *ngIf=" Discount=='nodiscount';then noDiscount ; else showDiscount  "></div>
@@ -14,15 +17,13 @@
     
 </ng-template>
 <br>
-<select name="CategoryList">
-    <option value="">Mobiles</option>
-    <option value="">Tablets</option>
-    <option value="">Laptops</option>
-</select>
 
-<div *ngFor="let category of CategoryList">
-    {{category.name}} {{category.id}}
-</div>
+
+<select name="" id="">
+    <option value="" *ngFor="let category of CategoryList">
+        {{category.name}} {{category.id}}
+    </option>
+</select>
 
 <br>
 <div *ngIf="isPurshased; then thenpurshased else notPurshed "></div>
