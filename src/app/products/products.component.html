@@ -1,12 +1,7 @@
 <!-- <p>products works!</p> -->
-
-
-
-<h1>{{ storeName | uppercase }}</h1>
+<!-- <h1>{{ storeName | uppercase }}</h1>
 <img [src] = storeLogo >
 <div *ngIf=" Discount=='nodiscount';then noDiscount ; else showDiscount  "></div>
-
-
 <ng-template #showDiscount>
     <h3>
         'We offer an explicit discount of: +{{ Discount}}
@@ -17,19 +12,17 @@
     
 </ng-template>
 <br>
-
-
 <select name="" id="">
     <option value="" *ngFor="let category of CategoryList">
         {{category.name}} {{category.id}}
     </option>
-</select>
+</select> -->
 
 <br>
-<div *ngIf="isPurshased; then thenpurshased else notPurshed "></div>
+ <div *ngIf="isPurshased; then thenpurshased else notPurshed "></div>
 
 <ng-template #thenpurshased>
-    <table *ngFor="let product of ProductList" style="border: 1px solid;width: 50%;">
+    <table *ngFor="let product of ProductList" style="border: 1px solid;width: 20%;">
         {{product.id}}
         {{product.name}}
         {{product.price}}
@@ -44,9 +37,9 @@
 
 <br>
 
-<input type="text" [(ngModel)]="clientName">
+<!-- <input type="text" [(ngModel)]="clientName">
 {{clientName}}
 
-<button (click)="purshased()">Buy</button>
+<button (click)="purshased()">Buy</button> -->
 
 

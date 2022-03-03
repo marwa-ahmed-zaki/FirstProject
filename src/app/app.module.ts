@@ -9,6 +9,13 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { DataComponentComponent } from './data-component/data-component.component';
+import { UsersComponent } from './users/users.component';
+import { PostsComponent } from './posts/posts.component';
+import { HomeComponent } from './home/home.component';
+import{HttpClientModule} from '@angular/common/http';
+import { UsersListComponent } from './users-list/users-list.component';
+import { GetAllProductComponent } from './get-all-product/get-all-product.component';
+import { GetAllPostsComponent } from './get-all-posts/get-all-posts.component'
 
 @NgModule({
   declarations: [
@@ -17,12 +24,19 @@ import { DataComponentComponent } from './data-component/data-component.componen
     NavComponent,
     FooterComponent,
     ProductsComponent,
-    DataComponentComponent
+    DataComponentComponent,
+    UsersComponent,
+    PostsComponent,
+    HomeComponent,
+    UsersListComponent,
+    GetAllProductComponent,
+    GetAllPostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
-    FormsModule
+    FormsModule , 
+    HttpClientModule
 
   ],
   providers: [],

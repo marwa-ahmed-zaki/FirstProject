@@ -9,9 +9,6 @@ export enum DiscountOffers {
  "20%"='20%',
 
 }
-
-
-
 export interface Iproduct{
 
     id:number;
